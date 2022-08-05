@@ -1,0 +1,11 @@
+site configurations to be placed in /etc/nginx/sites-available/
+
+example:
+/etc/nginx/sites-available/template.conf
+
+to disable the default nginx site:
+unlink /etc/nginx/sites-enabled/default
+
+to enable site configurations:
+ln -s /etc/nginx/sites-available/template.conf /etc/nginx/sites-enabled/template.conf
+
