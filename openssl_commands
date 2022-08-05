@@ -1,0 +1,8 @@
+#key/crt format
+openssl req -x509 -newkey rsa:2048 -keyout cert.key -out cert.crt -days 7205 -nodes -subj '/CN=template.local'
+
+#pem format
+openssl req -x509 -newkey rsa:2048 -keyout /etc/ssl/private/template-key.pem -out /etc/ssl/certs/template-cert.pem -days 7205 -nodes -subj '/CN=template.local'
+
+#Export certificate to import into PC with command below
+openssl pkcs12 -export -out template.pfx -inkey template.key -in template.crt
